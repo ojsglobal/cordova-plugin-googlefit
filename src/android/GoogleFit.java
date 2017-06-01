@@ -441,7 +441,9 @@ public class GoogleFit extends CordovaPlugin {
             try {
                 dataPoint_JSON.put("type", dp.getDataType().getName());
                 DataSource dataSource = dp.getOriginalDataSource();
-                String appPkgName = dataSource.getAppPackageName();
+                /*String appPkgName = dataSource.getAppPackageName();*/
+                String appPkgName = "com.google.android.gms";
+                
                 dataPoint_JSON.put("source", appPkgName);
                 dataPoint_JSON.put("start", dateFormat.format(dp.getStartTime(TimeUnit.MILLISECONDS)));
                 dataPoint_JSON.put("end", dateFormat.format(dp.getEndTime(TimeUnit.MILLISECONDS)));
